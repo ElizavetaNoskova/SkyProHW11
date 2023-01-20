@@ -1,3 +1,4 @@
+import java.util.Objects;
 public class Main {
     public static void main(String[] args) {
         Author authorName1 = new Author("Лев Толстой");
@@ -14,6 +15,14 @@ public class Main {
         System.out.println("Год издания книги " + book2.getPublishingYear());
         book2.setPublishingYear(89);
         System.out.println("Год издания книги " + book2.getPublishingYear());
+        Author authorName3 = new Author("Елисеева");
+        System.out.println(new Book("Fox", authorName3, 1965));
+        Book book5 = new Book("Война и Мир", authorName1, 1865);
+        Book book6 = new Book("Война и Мир", authorName1, 1865);
+        System.out.println(book5.equals(book6));
+        System.out.println(book5.hashCode());
+        System.out.println(book6.hashCode());
+        System.out.println(book2.hashCode());
     }
 
 
