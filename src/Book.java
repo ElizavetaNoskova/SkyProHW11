@@ -16,15 +16,21 @@ public class Book {
         if (this.getClass() != obj.getClass()){
             return false;
         }
+        
         Book c2 = (Book) obj;
+        if (getPublishingYear() != c2.getPublishingYear()){
+            return false;
+        }
+        if (getAuthorName() != c2.getAuthorName()){
+            return false;
+        }
         return title.equals(c2.title);
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(title);
+        return java.util.Objects.hash(title, authorName, publishingYear);
     }
-
     @Override
     public String toString() {
         return "Имя автора "+ authorName+ " Год издания "+ publishingYear;
