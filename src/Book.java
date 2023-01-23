@@ -1,7 +1,9 @@
 public class Book {
     private final String title;
     private final Author authorName;
+
     private final Author authorSername;
+
     private int publishingYear;
 
     public String getTitle() {
@@ -25,22 +27,26 @@ public class Book {
         if (getAuthorName() != c2.getAuthorName()){
             return false;
         }
+
         if (getAuthorSername() != c2.getAuthorSername()) {
             return false;
         }
+
         return title.equals(c2.title);
     }
 
     @Override
     public int hashCode() {
+
         return java.util.Objects.hash(title, authorName, authorSername, publishingYear);
     }
     @Override
     public String toString() {
         return "Имя автора и фамилия "+ authorName +" " + "Название книги " + title + " Год издания "+ publishingYear ;
+
+        return java.util.Objects.hash(title, authorName, publishingYear);
     }
-
-
+ 
 
     public void setPublishingYear(int publishingYear) {
         this.publishingYear = publishingYear;

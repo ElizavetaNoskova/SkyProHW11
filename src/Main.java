@@ -19,6 +19,7 @@ public class Main {
         System.out.println(new Book("Fox", authorName3, authorName3,  1965));
         Book book5 = new Book("Война и Мир", authorName1, authorName1,  1865);
         Book book6 = new Book("Война и Мир", authorName1, authorName1, 1865);
+
         System.out.println(book5.equals(book6));
         System.out.println(book5.hashCode());
         System.out.println(book6.hashCode());

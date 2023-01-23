@@ -34,6 +34,18 @@ public class Author {
         Author author = (Author) o;
         return authorName.equals(author.authorName) && authorSername.equals(author.authorSername);
     }
+
+    @Override
+    public String toString() {
+        return authorName;
+    }
+
+
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
 
 
